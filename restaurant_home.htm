@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link rel = "icon" href ="dish_img.png" type = "image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="restaurant_style.css"> 
+    <link rel="stylesheet" href="datepicker.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+</head>
+<body>
+    <div id="loader"></div>
+    <div id="webpage">
+        <header class="header">
+            <nav class="navbar">
+                <img src="dish_img.png" width="80" height="80" class="rest_logo" alt="" srcset="">
+                <span class="logo_name">Restauco.</span>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active"><i class="home far fa-home"></i>&nbsp;Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"><i class="menu far fa-list-alt"></i>&nbsp;Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"><i class="abot far fa-address-card"></i>&nbsp;About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"><i class="blog fas fa-blog"></i>&nbsp;Blog</a>
+                        <ul class="sub-menu">
+                            <li>Blog</li>
+                            <li>Blog Details</li>
+                            <li>Element</li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"><i class="cont fad fa-user-headset"></i>&nbsp;Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 column1">
+                    <h1 class="caption">Meet, Eat & Enjoy the true test<p class="cap_pargr">Making a reservation at Délicious restaurant is easy and takes just a couple of minutes.</p>
+                    <button class="cap_butn"><span>Menu</span></button><img class="cap_img" src="play-button.svg" alt="Responsive-img"><p class="cap_watch">
+                        Watch Video</p></h1>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 column2">
+                </div>
+            </div>
+            <div class="col-section-title d-flex justify-content-center">
+                <h2 class="title heading-title"></h2>
+            </div>
+            <div class="sec-para d-flex justify-content-center">
+                <p class="title-parg heading-par-title">Making a reservation at Délicious restaurant is easy and takes just a couple of minutes.</p>
+            </div>
+            <div class="row d-flex justify-content-center mb-4">
+                <div class="box-col col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <img src="services1.svg" class="box-col-1-img" alt="service1-image"><br><br>
+                    <div class="service-cap">
+                        <h5 id="healthy_meal">
+                            <a href="#">Healthy Meal</a>
+                        </h5>
+                        <p class="service-cap-para">Making a reservation at Délicious restaurant is easy and takes just a couple of minutes.</p>
+                    </div>
+                </div>
+                <div class="box-col col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <img src="services2.svg" class="box-col-2-img" alt="service2-image"><br><br>
+                    <div class="service-cap">
+                        <h5 id="fast_food">
+                            <a href="#">Fast Food</a>
+                        </h5>
+                        <p class="service-cap-para">Making a reservation at Délicious restaurant is easy and takes just a couple of minutes.</p>
+                    </div>
+                </div>
+                <div class="box-col col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <img src="services3.svg" class="box-col-3-img" alt="service3-image"><br><br>
+                    <div class="service-cap">
+                        <h5 id="coffee">
+                            <a href="#">Delicious Coffee</a>
+                        </h5>
+                        <p class="service-cap-para">Making a reservation at Délicious restaurant is easy and takes just a couple of minutes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dishes-block">
+                <button class="dishes-button"><span>Full Menu</span></button>
+                <h1 class="dishes-title">
+                    <span class="text-wrapper">
+                      <span class="letters">Most Popular Dishes</span>
+                      <span class="line"></span>
+                    </span>
+                </h1>
+                <p>Making a reservation at Délicious restaurant is easy and takes<br> just a couple of minutes.</p>
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event,'Breakfast')" id="defaultOpen">Breakfast</button>
+                    <button class="tablinks" onclick="openTab(event,'Lunches')">Lunches</button>
+                    <button class="tablinks" onclick="openTab(event,'Dinner')">Dinner</button>
+                    <button class="tablinks" onclick="openTab(event,'Drinks')">Drinks</button>
+                    <button class="tablinks" onclick="openTab(event,'Fastfood')">Fastfood</button>
+                </div>
+                <hr class="line">
+                <div id="Breakfast" class="tabcontent">
+                    <div id="carousel-one" class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="dishes-boxes">
+                                <div class="img-hover-zoom--blur">
+                                    <img src="sandwich.jpg" class="food-image" alt="sandwich-image"><br><br>
+                                </div>
+                                <div class="price">$20</div>
+                                <div class="food-content">
+                                    <h5>Sandwich</h5>
+                                    <p>Making a reservation at Délicious restaurant is easy and</p>
+                                    <a href="#">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dishes-boxes">
+                                <div class="img-hover-zoom--blur">
+                                    <img src="tuna-steak.jpg" class="food-image" alt="tuna-steak-image"><br><br>
+                                </div>
+                                <div class="price">$30</div>
+                                <div class="food-content">
+                                    <h5>Tuna steak</h5>
+                                    <p>Making a reservation at Délicious restaurant is easy and</p>
+                                    <a href="#">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dishes-boxes">
+                                <div class="img-hover-zoom--blur">
+                                    <img src="ham-burger.jpg" class="food-image" alt="ham-burger-image"><br><br>
+                                </div>
+                                <div class="price">$40</div>
+                                <div class="food-content">
+                                    <h5>Hamburger</h5>
+                                    <p>Making a reservation at Délicious restaurant is easy and</p>
+                                    <a href="#">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dishes-boxes">
+                                <div class="img-hover-zoom--blur">
+                                    <img src="tuna-steak.jpg" class="food-image" alt="tuna-steak-image"><br><br>
+                                </div>
+                                <div class="price">$50</div>
+                                <div class="food-content">
+                                    <h5>Hamburger</h5>
+                                    <p>Making a reservation at Délicious restaurant is easy and</p>
+                                    <a href="#">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>           
+                <div id="Lunches" class="tabcontent">
+                    <div id="carousel-two" class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="dishes-boxes">
+                                <div class="img-hover-zoom--blur">
+                                    <img src="sandwich.jpg" class="food-image" alt="sandwich-image"><br><br>
+                                </div>
+                                <div class="price">$20</div>
+                                <div class="food-content">
+                                    <h5>Sandwich</h5>
+                                    <p>Making a reservation at Délicious restaurant is easy and</p>
+                                    <a href="#">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dishes-boxes">
+                                <div class="img-hover-zoom--blur">
+                                    <img src="tuna-steak.jpg" class="food-image" alt="tuna-steak-image"><br><br>
+                                </div>
+                                <div class="price">$30</div>
+                                <div class="food-content">
+                                    <h5>Tuna steak</h5>
+                                    <p>Making a reservation at Délicious restaurant is easy and</p>
+                                    <a href="#">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dishes-boxes">
+                                <div class="img-hover-zoom--blur">
+                                    <img src="ham-burger.jpg" class="food-image" alt="ham-burger-image"><br><br>
+                                </div>
+                                <div class="price">$40</div>
+                                <div class="food-content">
+                                    <h5>Hamburger</h5>
+                                    <p>Making a reservation at Délicious restaurant is easy and</p>
+                                    <a href="#">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dishes-boxes">
+                                <div class="img-hover-zoom--blur">
+                                    <img src="tuna-steak.jpg" class="food-image" alt="tuna-steak-image"><br><br>
+                                </div>   
+                                <div class="price">$50</div>
+                                <div class="food-content">
+                                    <h5>Hamburger</h5>
+                                    <p>Making a reservation at Délicious restaurant is easy and</p>
+                                    <a href="#">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+                <div id="Dinner" class="tabcontent">
+                    <div id="carousel-three" class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="dishes-boxes">
+                                <div class="img-hover-zoom--blur">
+                                    <img src="sandwich.jpg" class="food-image" alt="sandwich-image"><br><br>
+                                </div>
+                                <div class="price">$20</div>
+                                <div class="food-content">
+                                    <h5>Sandwich</h5>
+                                    <p>Making a reservation at Délicious restaurant is easy and</p>
+                                    <a href="#">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dishes-boxes">
+                                <div class="img-hover-zoom--blur">
+                                    <img src="tuna-steak.jpg" class="food-image" alt="tuna-steak-image"><br><br>
+                                </div>
+                                <div class="price">$30</div>
+                                <div class="food-content">
+                                    <h5>Tuna steak</h5>
+                                    <p>Making a reservation at Délicious restaurant is easy and</p>
+                                    <a href="#">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dishes-boxes">
+                                <div class="img-hover-zoom--blur">
+                                    <img src="ham-burger.jpg" class="food-image" alt="ham-burger-image"><br><br>
+                                </div>
+                                <div class="price">$40</div>
+                                <div class="food-content">
+                                    <h5>Hamburger</h5>
+                                    <p>Making a reservation at Délicious restaurant is easy and</p>
+                                    <a href="#">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dishes-boxes">
+                                <div class="img-hover-zoom--blur">
+                                    <img src="tuna-steak.jpg" class="food-image" alt="tuna-steak-image"><br><br>
+                                </div>
+                                <div class="price">$50</div>
+                                <div class="food-content">
+                                    <h5>Hamburger</h5>
+                                    <p>Making a reservation at Délicious restaurant is easy and</p>
+                                    <a href="#">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="Drinks" class="tabcontent">
+                    <div id="carousel-four" class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="dishes-boxes">
+                                <div class="img-hover-zoom--blur">
+                                    <img src="sandwich.jpg" class="food-image" alt="sandwich-image"><br><br>
+                                </div>
+                                <div class="price">$20</div>
+                                <div class="food-content">
+                                    <h5>Sandwich</h5>
+                                    <p>Making a reservation at Délicious restaurant is easy and</p>
+                                    <a href="#">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dishes-boxes">
+                                <div class="img-hover-zoom--blur">
+                                    <img src="tuna-steak.jpg" class="food-image" alt="tuna-steak-image"><br><br>
+                                </div>
+                                <div class="price">$30</div>
+                                <div class="food-content">
+                                    <h5>Tuna steak</h5>
+                                    <p>Making a reservation at Délicious restaurant is easy and</p>
+                                    <a href="#">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dishes-boxes">
+                                <div class="img-hover-zoom--blur">
+                                    <img src="ham-burger.jpg" class="food-image" alt="ham-burger-image"><br><br>
+                                </div>
+                                <div class="price">$40</div>
+                                <div class="food-content">
+                                    <h5>Hamburger</h5>
+                                    <p>Making a reservation at Délicious restaurant is easy and</p>
+                                    <a href="#">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dishes-boxes">
+                                <div class="img-hover-zoom--blur">
+                                    <img src="tuna-steak.jpg" class="food-image" alt="tuna-steak-image"><br><br>
+                                </div>
+                                <div class="price">$50</div>
+                                <div class="food-content">
+                                    <h5>Hamburger</h5>
+                                    <p>Making a reservation at Délicious restaurant is easy and</p>
+                                    <a href="#">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="Fastfood" class="tabcontent">
+                    <div id="carousel-five" class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="dishes-boxes">
+                                <div class="img-hover-zoom--blur">
+                                    <img src="sandwich.jpg" class="food-image" alt="sandwich-image"><br><br>
+                                </div>
+                                <div class="price">$20</div>
+                                <div class="food-content">
+                                    <h5>Sandwich</h5>
+                                    <p>Making a reservation at Délicious restaurant is easy and</p>
+                                    <a href="#">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dishes-boxes">
+                                <div class="img-hover-zoom--blur">
+                                    <img src="tuna-steak.jpg" class="food-image" alt="tuna-steak-image"><br><br>
+                                </div>
+                                <div class="price">$30</div>
+                                <div class="food-content">
+                                    <h5>Tuna steak</h5>
+                                    <p>Making a reservation at Délicious restaurant is easy and</p>
+                                    <a href="#">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dishes-boxes">
+                                <div class="img-hover-zoom--blur">
+                                    <img src="ham-burger.jpg" class="food-image" alt="ham-burger-image"><br><br>
+                                </div>
+                                <div class="price">$40</div>
+                                <div class="food-content">
+                                    <h5>Hamburger</h5>
+                                    <p>Making a reservation at Délicious restaurant is easy and</p>
+                                    <a href="#">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dishes-boxes">
+                                <div class="img-hover-zoom--blur">
+                                    <img src="tuna-steak.jpg" class="food-image" alt="tuna-steak-image"><br><br>
+                                </div>
+                                <div class="price">$50</div>
+                                <div class="food-content">
+                                    <h5>Hamburger</h5>
+                                    <p>Making a reservation at Délicious restaurant is easy and</p>
+                                    <a href="#">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+        </div>
+        <div class="book-table container">
+            <div class="justify-content-between">
+                <div class="image">
+                    <img src="xoner.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="book-table-form">
+                    <div class="form-tittle mb-30">
+                        <h2>Book a table</h2>
+                        <p>Making a reservation at Délicious restaurant is easy and takes<br> just a couple of minutes.</p>
+                    </div>
+                    <form action="#" method="POST">
+                        <input type="text" name="name" placeholder="Number of guest"><br><br>
+                        <input type="text" placeholder="date" id="datepicker">
+                        <select name="select" id="select-item">
+                            <option value>Dinner</option>
+                            <option value>Brack-fast</option>
+                            <option value>Dinner</option>
+                            <option value>Dinner</option>
+                        </select><br><br>
+                        <input type="text" name="" placeholder="Phone no."><br><br>
+                        <textarea name="message" placeholder="Message" rows="4" cols="50"></textarea><br><br>
+                        <button class="submit" type="button"><span>Sent Request</span></button><br><br>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="customer-block">
+                <h1 class="customer-text">
+                    <span class="text-wrapper">
+                      <span class="letters">Guest Reviews</span>
+                    </span>
+                </h1>
+                <p>Making a reservation at Délicious restaurant is easy and takes just a couple <br> of minutes.</p>
+                <div class="owl-two owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="cust-box-col">
+                            <img src="contact1.jpg" class="box-cont-1-img" alt="contact1-image"><br><br>
+                            <div class="service-cap">
+                                <p class="service-cap-para">Making a reservation at Délicious restaurant is easy and takes just a couple of minutes.</p>
+                                <hr>
+                            </div><br>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="cust-box-col">
+                             <img src="contact2.jpg" class="box-cont-1-img" alt="contact1-image"><br><br>
+                             <div class="service-cap">
+                                <p class="service-cap-para">Making a reservation at Délicious restaurant is easy and takes just a couple of minutes.</p>
+                                <hr>   
+                             </div><br>
+                             <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="cust-box-col">
+                            <img src="contact3.jpg" class="box-cont-1-img" alt="contact1-image"><br><br>
+                            <div class="service-cap">
+                                <p class="service-cap-para">Making a reservation at Délicious restaurant is easy and takes just a couple of minutes.</p>
+                                <hr>
+                            </div><br>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="item">
+                        <div class="cust-box-col">
+                            <img src="contact4.jpg" class="box-cont-1-img" alt="contact1-image"><br><br>
+                            <div class="service-cap">
+                                <p class="service-cap-para">Making a reservation at Délicious restaurant is easy and takes just a couple of minutes.</p>
+                                <hr>
+                            </div><br>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <center>
+            <a class="insta-btn">
+                <i class="fab fa-instagram"></i>&nbsp;@restauco
+            </a>
+        </center>
+        <div class="footer-image-block">
+            <div class="carousel-one owl-carousel owl-theme">
+                <div class="item"><img src="footer_img1.jpg" class="img-fluid" alt=""></div>
+                <div class="item"><img src="footer_img2.jpg" class="img-fluid" alt=""></div>
+                <div class="item"><img src="footer_img3.jpg" class="img-fluid" alt=""></div>
+                <div class="item"><img src="footer_img4.jpg" class="img-fluid" alt=""></div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container footer-block">
+                <div class="row d-flex">
+                    <div class="col-lg-4 col-md-8 mb-md-0">
+                        <img src="rest_logo.png" class="img-fluid" alt="Responsive image">
+                        <p>
+                            Land behold it created good saw after she'd Our set living. 
+                            Signs midst dominion creepeth morning laboris nisi ufsit aliquip.
+                        </p>
+                        <br>
+                        <div class="footer-social">
+                            <p><i class="fab fa-twitter-square">&nbsp;&nbsp;&nbsp;&nbsp;</i><i class="fab fa-facebook-square"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                               <i class="fab fa-linkedin"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-pinterest-square"></i></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                        <h4>Quick Links</h4>
+                        <div class="row d-flex">
+                            <a href="#" class="colu-2-anc">Home</a>
+                            <a href="#" class="colu-2-anc">About</a>
+                            <a href="#" class="colu-2-anc">Services</a>
+                            <a href="#" class="colu-2-anc">Blog</a>
+                            <a href="#" class="colu-2-anc">Contact</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-8 mb-4 mb-md-0">
+                        <h4>Cakes</h4>
+                        <div class="row d-flex">
+                            <a href="#" class="colu-2-anc">Blackforest</a>
+                            <a href="#" class="colu-2-anc">Bodhubon</a>
+                            <a href="#" class="colu-2-anc">Rongdhonu</a>
+                            <a href="#" class="colu-2-anc">Meghrong</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+                        <h4>Contact Us</h4>
+                        <div class="row d-flex">
+                            <p>76/A, Green Lane, Dhanmondi, NYC</p>
+                            <a href="#" class="phone-no">+10 (78) 738-9083</a>
+                            <a href="#" class="email">restaurco21@gmail.com</a>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+            <center><span class="develop-by">Copyright ©2021 All rights reserved | - By Chauhan Jaydeep <i class="fas fa-laptop-code"></i></span></center>
+        </footer>
+        <a href="#" id="scroll"><span></span></a>
+    </div>
+    <script src="datepicker.js"></script>
+    <script src="ras_nav.js"></script>
+</body>
+</html>
